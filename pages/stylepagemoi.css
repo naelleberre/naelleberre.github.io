@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    caret-color: transparent !important;
+    user-select: none;
+}
+
+body {
+    background-color: rgb(226, 226, 226);
+    background-image: url('background.png');
+    background-size: cover;
+    background-position: top center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden; 
+    display: block;
+}
+  
+#titre {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    font-family: 'UnifrakturMaguntia';
+    font-size: 200px;
+    letter-spacing: -6px;
+    color: rgb(0, 5, 10);
+}
