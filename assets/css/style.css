@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    caret-color: transparent !important;
+    user-select: none;
+}
+
+body {
+    background-color: rgb(226, 226, 226);
+    background-image: url('assets/css/img/background.png');
+    background-size: cover;
+    background-position: top center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden; 
+    display: block;
+}
+  
+#PORTFOLIO {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    font-family: 'UnifrakturMaguntia';
+    font-size: 250px;
+    letter-spacing: -6px;
+    color: rgb(0, 5, 10);
+}
+
+.NAELLEBERRE {
+    display: flex;
+    justify-content: center; /* centre horizontalement */
+    margin-top: -20px;
+    text-align: center;
+    font-family: 'Ysabeau Office';
+    font-size: 200%;
+    color: rgb(0, 5, 10);
+}
+
+.textlink {     /* parametre globale pout tous les texte lien */
+    display: block; 
+    cursor: pointer; /* Indique que l'element est cliquable */
+    text-decoration: none; /* Retirer le soulignement du lien */
+    color: rgb(0, 5, 10);
+}
+
+.textlink:hover {       /* parametre globale pout tous les texte lien */
+    color: rgb(141, 8, 1);
+}
+
+.fleche-scroll img {        /* parametre fleche */
+    width: 50px;
+    height: 50px;
+    margin-top: 250px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: sticky;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+.fleche-scroll img:hover {      /* animation fleche */
+    transform: translateY(10px) translate(-50%, -50%);
+}
+
+.ligne {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+  
+#PROJET, #DATE {
+    font-family: 'Ysabeau Office';
+    font-size: 200%;
+    color: rgb(0, 5, 10);
+    margin: 0; /* pour enlever l'espacement par defaut des <p> */
+}
+  
+.stack {
+    width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 175px;
+}
+
+.image-stack {      /* parametre du container pour l'effet de pil*/
+    display: flex;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg) rotateZ(-50deg);
+}
+  
+.image-stack img{       /* parametre de chaque image pour l'effet en 3d */
+    cursor: pointer;
+    width: 350px;
+    height: auto;
+    transform: rotateY(-1deg) rotateZ(70deg) skew(20deg, 5deg);
+    margin-top: -50px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    z-index: var(--i);
+}
+
+.image-stack a {        /* bien placer les images pour pas quelles soit toutes empiler et pas distinguable */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: var(--i);
+    transform: 
+        translateX(calc(var(--i) * -70px)) 
+}
+
+.image-stack a:hover img{       /* animation quand la souris passe sur une image */
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    transform: rotateZ(70deg) translateY(-100px) translateZ(4px) skew(20deg, 5deg);
+    z-index: 999;
+}
